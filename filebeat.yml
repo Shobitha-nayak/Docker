@@ -1,0 +1,12 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/nginx/*.log  # Adjust the path to your log files
+
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"]  # Use the hostname of your Elasticsearch container
+
+setup.kibana:
+  host: "kibana:5601"  # Use the hostname of your Kibana container
+
